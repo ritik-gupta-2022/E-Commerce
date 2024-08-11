@@ -1,0 +1,32 @@
+<% layout('layouts/boilerplate') %>
+<%-include('../partials/flash')%>
+<div class="login-wrapper">
+    <div class="login-content">
+        <div class="login-form-container">
+            <h1 class="login-title">Welcome back!</h1>
+            <form action="/login" method="post">
+                <div class="input-group">
+                    <div>
+                        <i class="fa fa-user icon"></i>
+                        <input class="form-input" type="text" name="username" id="username" placeholder="Username">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div>
+                        <i class="fa fa-lock icon"></i>
+                        <input class="form-input" type="password" name="password" id="password" placeholder="Password">
+                    </div>
+                </div>
+                <button class="btn-primary btn-block mt-4">Login</button>
+            </form>
+            <p class="text-small mt-2">Don't have an account? <a href="/register" class="link-primary">Sign up</a></p> 
+        </div>
+        <div class="login-right-content">
+            <h2 class="right-title">CORO</h2>
+            <p class="right-text">
+                Discover our amazing e-commerce platform! Shop the latest products, enjoy exclusive deals, and experience the best in online shopping.
+            </p>
+            <a href="/about" class="btn-secondary">Learn More</a>
+        </div>
+    </div>
+</div>

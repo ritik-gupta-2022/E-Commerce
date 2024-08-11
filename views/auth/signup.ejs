@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate') %>  
+<%-include('../partials/flash')%>
+
+<div class="register-wrapper">
+    <div class="register-content">
+        <div class="register-form-container">
+            <h1 class="register-title">Welcome!</h1>
+            <form class="needs-validation" action="/register" method="post" novalidate>
+                <div class="input-group">
+                    <i class="fa fa-user icon"></i>
+                    <input class="form-input" type="text" name="username" id="username" placeholder="Username" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please provide Email.</div>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa fa-envelope icon"></i>
+                    <input class="form-input" type="email" name="email" id="email" placeholder="Email" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please provide Email.</div>
+                </div>
+
+                <div class="input-group">
+                    <i class="fa fa-lock icon"></i>
+                    <input class="form-input" type="password" name="password" id="password" placeholder="Password" required>
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please provide Password.</div>
+                </div>
+
+                <div class="input-group">
+                    <label class="form-control">
+                        <input type="radio" name="role" id="seller" value="seller"/>
+                        Buyer
+                      </label>
+                    
+                      <label class="form-control">
+                        <input type="radio" name="role" id="seller" value="seller"/>
+                        Seller
+                      </label>
+                </div>
+                <button class="btn btn-primary btn-block">Sign Up</button>
+                <p class="text-small mt-2">Already have an account? <a href="/login" class="link-primary">Sign In</a></p>
+            </form>
+        </div>
+
+        <div class="register-right-content">
+            <h2 class="right-title">CORO</h2>
+            <p class="right-text">Discover our amazing e-commerce platform! Shop the latest products, enjoy exclusive deals, and experience the best in online shopping.</p>
+            <a href="/about" class="btn-secondary">Learn More</a>
+        </div>
+    </div>
+</div>

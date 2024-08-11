@@ -1,0 +1,50 @@
+<% layout('layouts/boilerplate') %>  
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+<body>
+<%-include('../partials/navbar')%>
+<%-include('../partials/flash')%>
+<main>
+<section id="men-hero">
+    <h1>Men's Wear</h1>
+    <p>save more coupons & up to 70% off!</p>
+</section>
+
+<section class="product-section" class="section-p1">
+<div class="pro-collection">
+  <%for(let product of products){%>
+        <% if(product.category && product.category=='men'){ %>
+        <div class="product-cart">
+        <img src="<%=product.img%>" alt="product image" />
+        <span><%=product.brand%></span>
+        <h4><%=product.name%></h4>
+
+        <% if(product.reviews.length){ %>
+            <div class="stars">
+            
+            <% for (let i = 0; i < parseInt(product.avgRating/product.reviews.length); i++) { %>
+                <i class="fa-solid fa-star"></i>
+            <% } %>
+            <% if(product.avgRating/product.reviews.length!=parseInt(product.avgRating/product.reviews.length)){ %>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            <% } %>
+            </div>
+        <%}else{%>
+            <div style="height:30px;">
+            <i class="fa-regular fa-star" style="color: #8d8d8d;"></i>
+            <i class="fa-regular fa-star" style="color: #8d8d8d;"></i>
+            <i class="fa-regular fa-star" style="color: #8d8d8d;"></i>
+            <i class="fa-regular fa-star" style="color: #8d8d8d;"></i>
+            <i class="fa-regular fa-star" style="color: #8d8d8d;"></i>
+            </div>
+        <% } %>
+            <h5 class="mrp">₹<%= product.price*2 %></h5>
+            <h4 class="price">&nbsp;₹<%= product.price %></h4>
+            <a href="/products/<%=product._id%>"><i class="fa-solid fa-eye buy-icon"></i></a>
+        </div>
+        <%}%>
+    <%}%>
+</div>
+</section>
+<%-include('../partials/footer')%>

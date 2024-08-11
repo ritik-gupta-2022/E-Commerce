@@ -1,0 +1,67 @@
+  
+/* Footer */
+footer{
+    background-color: #fafbfc;
+    padding: 10px 60px 10px 100px;
+}
+.footer_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.useful_links{
+    font-size:12px;
+    font-weight:700;
+    color: #282c3f;
+    margin: 28px 0px 11px 0px;
+}
+.shopping_content, .links_content{
+    text-decoration: none;
+    color:#696b79;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    margin: 3px 0px;
+}
+.footer_column{
+    margin:10px 0px;
+}
+.download_app{
+    margin: 5px;
+}
+.app{
+    height: 42px;
+    width: 140px;
+}
+.icons{
+    color:#80848f;
+    transform: scale(1.5);
+}
+.icon_box{
+    height: 20px;
+    margin: 10px;
+}
+.original_img{
+    height: 40px;
+    width: 48px;
+    display: inline-block;
+}
+.img_txt{
+    margin: 0px 0px 0px 8px;
+    color: #94969f;
+    font-size: 15px;
+}
+.bold_txt{
+    font-weight: 600;
+    color: #282c3f;
+}
+.img_box{
+    margin: 40px 0px 5px 0px;
+    display: flex;
+}
+.copyright {
+    color: #94969f;
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 16px;
+}

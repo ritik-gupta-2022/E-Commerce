@@ -1,0 +1,74 @@
+<% layout('layouts/boilerplate') %>  
+<%- include('../partials/navbar') %>
+    
+<div class="form-container">
+    <div class="form-content">
+        <h2 class="form-title">Add New Product</h2>
+        <form class="needs-validation custom-form" action="/products" method="post" novalidate>
+            <div class="form-group">
+                <label class="form-label" for="brand"><i class="fas fa-tag"></i> Brand name:</label>
+                <input type="text" name="brand" class="form-control" id="brand" placeholder="Brand of product" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide the brand name.</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="naam"><i class="fas fa-box"></i> Product Name:</label>
+                <input type="text" name="name" class="form-control" id="naam" placeholder="Name of product" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide the product name.</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="img"><i class="fas fa-image"></i> Image URL:</label>
+                <input type="text" name="img" class="form-control" id="img" placeholder="Link of product" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide the image URL.</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="price"><i class="fas fa-dollar-sign"></i> Price:</label>
+                <input type="number" name="price" class="form-control" id="price" placeholder="Price of product" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide the price.</div>
+            </div>
+            <div class="form-group">
+                <label class="form-label"><i class="fas fa-list"></i> Category:</label>
+                <div class="form-radio-group">
+                    <label for="men">                        
+                        <input class="form-check-input" type="radio" name="category" id="men" value="men"> <span>Men</span>
+                    </label>
+                    <label for="women">
+                        <input class="form-check-input" type="radio" name="category" id="women" value="women"> <span>Women</span>
+                    </label>
+                    <label for="accesories">
+                        <input class="form-check-input" type="radio" name="category" id="accesories" value="accesories"> <span>Accesories</span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="desc"><i class="fas fa-align-left"></i> Description:</label>
+                <textarea name="desc" class="form-control" id="desc" rows="5" placeholder="Description of product" required></textarea>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please provide the description.</div>
+            </div>
+            <button class="btn btn-success custom-btn" type="submit"><i class="fas fa-plus-circle"></i> Add Product</button>
+        </form>
+    </div>
+</div>
+<%-include('../partials/footer')%>
+<script>
+    (() => {
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+        form.classList.add('was-validated')
+    }, false)
+})
+})() 
+</script>
+
+</body>
+</html>

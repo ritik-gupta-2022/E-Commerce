@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+  #hero {
+    background-image: url(https://github.com/tech2etc/Build-and-Deploy-Ecommerce-Website/blob/main/img/about/banner.png?raw=true);
+    /* width: 100%; */
+    height: 250px;
+    background-size: cover;
+    /* background-color: #cce7d0; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    color: aliceblue;
+  }
+  #hero h2{
+    font-size: 45px;
+    
+  }
+  #hero h5{
+    color: #c8d1cd;
+    font-size: 15px;
+    margin: 13px 0 20px 0;
+    
+  }
+  #about-head{
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-around;
+ }
+  #about-head img{
+    width:45%;
+    height: auto;
+    margin-left: 50px;
+  }
+  #about-head div{
+   padding-left: 40px;
+    margin-right: 40px;
+    align-self: center;
+    color: #848d89;
+  }
+  #about-head h2{
+    margin: 15px 0 20px 0;
+    /* color: #848d89; */
+    font-size: 45px;
+  }
+
+  #about-app{
+    padding: 40px 45px;
+    text-align: center;
+  }
+
+  #about-app h1{
+    font-size: 40px;
+    line-height: 64px;
+    color: #222;
+  }
+  #about-app .video{
+   width:70%;
+   height: 100%;
+   margin: 30px auto 0 auto;
+  }
+  #about-app .video video{
+    width:70%;
+    height: 100%;
+    border-radius: 20px;
+   }
+
+
+   #features {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  #features .f-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.03);
+    border: 1px solid #cce7d0;
+    border-radius: 4px;
+    margin: 15px 0;
+    transition: box-shadow 0.3s;
+  }
+  #features .f-box:hover {
+    box-shadow: 10px 10px 54px rgba(0, 0, 0, 0.1);
+  }
+  #features .f-box img {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #features .f-box h6 {
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    font-size: 14px;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+  }
+  #features .f-box:nth-child(2) h6 {
+    background-color: #cdebbc;
+  }
+  #features .f-box:nth-child(3) h6 {
+    background-color: #d1e8f2;
+  }
+  #features .f-box:nth-child(4) h6 {
+    background-color: #cdd4f8;
+  }
+  #features .f-box:nth-child(5) h6 {
+    background-color: #f6dbf6;
+  }
+  #features .f-box:nth-child(6) h6 {
+    background-color: #fff2e5;
+  }
